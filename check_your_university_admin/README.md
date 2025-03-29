@@ -1,4 +1,4 @@
-# **Check_your_university_public**
+# **Check_your_university_admin**
 
 ## Краткое описание
 
