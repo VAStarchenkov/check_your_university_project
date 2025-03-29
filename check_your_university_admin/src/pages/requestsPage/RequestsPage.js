@@ -76,7 +76,7 @@ const RequestsPage = () => {
       setBuildingActionMessage(`Корпус "${buildingName}" добавлен.`);
       setBuildingName('');
     } catch (err) {
-      setBuildingActionMessage('Ошибка при добавлении корпуса.');
+      setBuildingActionMessage('Такой корпус уже существует. Его нельзя добавить.');
       console.error(err);
     }
   };
@@ -94,7 +94,7 @@ const RequestsPage = () => {
       setBuildingActionMessage(`Корпус "${buildingName}" удалён.`);
       setBuildingName('');
     } catch (err) {
-      setBuildingActionMessage('Ошибка при удалении корпуса.');
+      setBuildingActionMessage('Такого корпуса не существует. Его удалить нельзя.');
       console.error(err);
     }
   };
