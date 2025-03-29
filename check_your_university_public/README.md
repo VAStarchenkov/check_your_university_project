@@ -25,8 +25,6 @@ npm start
 
 ## Инструкция для запуска тестирования сервиса
 
-**Информация о тестировании есть в директории coverage**
-
 ```bash
 cd check_your_university_public
 npm install
