@@ -1,0 +1,290 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    /* Основные цвета в проекте */
+    --white: #fff;
+    --black: #000;
+    --gray: #140303;
+    --blue: #1a73e8;
+
+    /* Навигация */
+    --nav-bg: var(--black);
+    --nav-border: var(--gray);
+    --nav-text: var(--white);
+
+    /* Подвал */
+    --footer-bg: var(--black);
+    --footer-text: var(--white);
+    
+    /* светлая тема */
+    --page-bg: var(--white);
+    --text-color: var(--black);
+    
+    --btn-bg: rgba(140, 143, 214, 0.25);
+    --btn-text: var(--black);
+
+    --accent: var(--blue);
+    --title-1: var(--accent);
+    --title-2: var(--accent);
+    --title-3: var(--black);
+
+    --university-card-bg: var(--white);
+    --university-card-text: var(--black);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+    /* темная тема */
+    --page-bg: #252526;
+    --text-color: var(--white);
+
+    --btn-text: var(--white);
+
+    --title-1: var(--accent);
+    --title-2: var(--accent);
+    --title-3: var(--white);
+
+    --university-card-bg: var(--black);
+    --university-card-text: var(--white);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+}
+
+html, body {
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+    letter-spacing: -0.5px;
+
+    /* цвет страницы и текста в зависимости от темы */
+    background-color: var(--page-bg);
+    color: var(--text-color);
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* стили для основной страницы */
+.section {
+    padding: 70px 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px; /* отступ сверху-снизу 0 пикселей, справа-слева по 15 */
+    max-width: 1200px; /* максимальная ширина контейнера по странице */
+}
+
+.title-1 {
+    margin-bottom: 60px; /* расстояние после заголовка */
+
+    font-size: 45px; /* размер шрифта */
+    font-weight: 700; /* толщина шрифта */
+    line-height: 1.3; /* расстояние между предложениями */
+    color: var(--title-1); /* цвет шрифта */
+
+}
+
+.stat-list {
+    
+    padding: 30px 60px; /* сверху-внизу отступ по 30 пикселей, справа-слева по 60*/
+    margin-bottom: 10px; /* дополнительный отступ снизу */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.stat-list__item {
+    margin-bottom: 45px; /* расстояние после каждого из элементов статистики */
+    
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.stat-list__item strong {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+em {
+    font-style: normal;
+    color: var(--accent);
+}
+
+.infproject-list {
+
+    padding: 30px 60px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 40px;
+}
+
+.infproject-list__item {
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* стили для страницы контактов */
+.connect-bot {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-2 {
+    margin-bottom: 60px;
+
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--title-2);
+    text-align: center; /* чтобы заголовок был по центру */
+}
+
+.title-3 {
+    margin-bottom: 70px;
+    padding: 0 45px;
+
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--title-3);
+    text-align: left;
+}
+
+.social-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin-bottom: 35px;
+    padding: 0 80px;
+}
+
+.social-list__item {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+    
+}
+
+.social-list__item a {
+    color: var(--title-3);
+
+    transition: opacity 0.2s ease-in;
+}
+
+.social-list__item a:hover {
+    opacity: 0.7;
+}
+
+/* стили для карточек с университетами на главном сайте */
+.universities {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* для мобильных платформ */
+    column-gap: 30px; /* расстояние между каточками по горизонтали */
+    row-gap: 30px; /* расстояние между карточками по вертикали */
+}
+
+/* стили для каждой карточки-университета отдельно */
+.university-details {
+    margin: 0 auto;
+    max-width: 865px; /* максимальная ширина блока после нейминга универа */
+
+    display: flex;
+    flex-direction: column; /* чтобы карточка, описание и ссылка шли друг за другом */
+    align-items: center; /* чтобы элементы шли вертикально по центру и занимали минимум возможной площади */
+    text-align: center; /* чтобы текст внутри описания был по центру */
+}
+
+.university-details__cover {
+    max-width: 100%; /* максимальная ширина картинки - 100% */
+    margin-bottom: 40px; /* отступ после картинки */
+
+    box-shadow: var(--box-shadow);
+    border-radius: 15px; /*  скругление краев картинки */
+}
+
+.university-details__desc {
+    margin-bottom: 30px; /* отсуп после описания */
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+/* изменение стилей под мобильную версию сайта */
+@media (max-width: 620px) {
+
+    /* основная страница */
+
+    .section {
+        padding: 40px 0; 
+    }
+
+    .title-1 {
+        margin-bottom: 10px; /* расстояние после заголовка */
+        font-size: 30px;
+    }
+
+    .stat-list {
+        padding: 10px 30px;
+    }
+    
+    .stat-list__item {
+        margin-bottom: 25px; /* расстояние после каждого из элементов статистики */
+        font-size: 20px;
+    }
+    
+    .stat-list__item strong {
+        font-size: 30px;
+    }
+    
+    .infproject-list {
+
+        padding: 10px 30px;
+        row-gap: 20px;
+    }
+    
+    .infproject-list__item {
+    
+        font-size: 20px;
+    }
+
+    /* страница с контактами */
+
+    .connect-bot {
+        margin-bottom: 40px;
+    }
+
+    .title-3 {
+        margin-bottom: 35px;
+        font-size: 30px;
+    }
+
+    .social-list {
+        row-gap: 25px;
+        padding: 0 65px;
+    }
+
+    .social-list__item {
+        font-size: 20px;        
+    }
+
+    .title-2 {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+}

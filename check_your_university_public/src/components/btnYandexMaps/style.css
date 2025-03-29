@@ -1,0 +1,26 @@
+/* стили для кнопки от каждого проекта */
+
+.btn-outline {
+	display: flex;
+	column-gap: 10px; /* расстояние между иконкой и названием */
+	align-items: center; /* расставление элементов по центру относительно поперечного сечения */
+
+	height: 48px; /* высота кнопки */
+	padding: 12px 20px; /* отступы внутри сверху-снизу по 12 пикселей, справа-слева по 20 пикселей */
+
+	border-radius: 15px; /* скругление краев */
+	border: 1px solid #000; /* цвет обводки */
+	background-color: var(--btn-bg); /* цвет фона */
+	color: var(--btn-text); /* цвет надписи кнопки */
+
+	transition: opacity 0.2s ease-in; /* время, за которое меняется прозрачность */
+}
+
+.btn-outline:hover {
+	opacity: 0.8; /* прозрачность */
+}
+
+.btn-outline:active {
+	position: relative;
+	top: 2px; /* кнопка подпрыгивает вверх при нажатии */
+}

@@ -1,0 +1,79 @@
+.footer {
+    margin-top: auto; /* отступ сверху максимально возможный */
+    padding: 60px 0px 50px; /* отступ сверху 60 пикселей, справа,слева-0, снизу - 50*/
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+/* настройка расположения верхней фигуры, содержащей два блока и нижней надписи*/
+.footer__wrapper {
+    display: flex; /* выстраивание фигуры и надписи в ряд по вертикали */
+    flex-direction: column; /* указываем выстраивание в качестве колонки */
+    align-items: center; /* расставление элементов по центру */
+    row-gap: 27px; /* расстояние между элементами в колонке*/
+}
+
+/* настройка расположения двух фигур */
+.social {
+    display: flex;
+    column-gap: 100px;
+    justify-content: center; 
+}
+
+/* настройка иконок и надписей */
+.social__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 27px;
+}
+
+/* настройка надписи человека */
+.link-user {
+    font-size: 16px;
+}
+
+/* настройка расположения самих иконок */
+.links {
+    display: flex;
+    align-items: center;
+    column-gap: 27px;
+}
+
+/* настройка надписи снизу */
+.copyright {
+    font-size: 12px;
+}
+
+/* изменение стилей под мобильную версию сайта */
+@media (max-width: 620px) {
+
+    .footer {
+        padding: 30px 0px 30px;
+
+    }
+
+    .footer__wrapper {
+        row-gap: 20px;
+    }
+    
+    .social {
+        column-gap: 70px;
+    }
+    
+    .social__item {
+        row-gap: 20px;
+    }
+    
+    .link-user {
+        font-size: 12px;
+    }
+    
+    .links {
+        column-gap: 20px;
+    }
+    
+    .copyright {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,71 @@
+.nav {
+    padding: 20px 0; /* внутренние отступы сверху-снизу по 20, справа-слева по 40 пикселей*/
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
+    color: var(--nav-text);
+    letter-spacing: normal;
+}
+
+.nav-row {
+    display: flex; /* чтобы элементы шли друг за другом*/
+    justify-content: flex-end; /* для выравнивания по правому краю */
+    align-items: center; /* расставление элементов по центру относительно поперечного сечения */
+    column-gap: 30px; /* расстояние между элементами в ul списке по ширине*/
+    row-gap: 20px; /* расстояние между элементами в ul спике по высоте */
+    flex-wrap: wrap; /* для переноса элементов на след. строку */
+}
+
+.logo {
+    margin-right: auto; /* максимально возможно расстояние справа */
+    color: var(--nav-text); /* цвет логотипа */
+    font-size: 24px; /* размер шрифта */
+    font-family: "Poppins", sans-serif; /* четкий шрифт */
+}
+
+.logo strong {
+    font-weight: 700; /* жирность шрифта */
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    align-items: center;
+    column-gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-list__link {
+    color: var(--nav-text);
+    transition: opacity 0.2s ease-in; /* скорость изменения прозрачности */
+}
+
+.nav-list__link:hower {
+    opacity: 0.8; /* коэф прозрачности элемента при наведении курсора */
+}
+
+.nav-list__link--active {
+    position: relative;
+}
+
+.nav-list__link--active::before {
+    content: "";
+
+    position: absolute;
+    left: 0; /* отступ слева */
+    top: 100%; /* отступ от потолка */
+
+    display: block;
+    height: 2px; /* высота элемента */
+    width: 100%; /* возможная ширина элемента */
+    background-color: var(--accent); /* цвет элемента */
+}
+
+/* изменение стилей под мобильную версию сайта */
+@media (max-width: 620px) {
+    .nav-row {
+        justify-content: space-between;
+    }
+}

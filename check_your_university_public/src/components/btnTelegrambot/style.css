@@ -1,0 +1,35 @@
+.btn-tbot {
+    display: flex;
+    column-gap: 10px; /* расстояние между картинкой и надписью */
+    align-items: center; /* расставление элементов по центру относительно поперечного сечения */
+
+    
+    width: 400px;
+    height: 60px;
+
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+
+    transition: opacity 0.2s ease-in;
+}
+
+.btn-tbot:hover {
+    opacity: 0.6;
+}
+
+.btn-tbot:active {
+    position: relative;
+    top: 2px;
+}
+
+/* изменение стилей под мобильную версию сайта */
+@media (max-width: 620px) {
+
+    .btn-tbot {
+        column-gap: 5px; /* расстояние между картинкой и надписью */
+        width: 300px;
+    }
+
+}
