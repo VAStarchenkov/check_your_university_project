@@ -207,19 +207,3 @@ html, body {
 .building-controls-combined button:last-of-type:hover {
   background-color: #dc2626;
 }
-
-@media (max-width: 620px) {
-  .section {
-    padding: 40px 0;
-  }
-
-  .TableWrapper h2 {
-    font-size: 20px;
-  }
-
-  .Table th,
-  .Table td {
-    font-size: 14px;
-    padding: 6px;
-  }
-}
