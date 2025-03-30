@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-const API_BASE_URL = 'http://5.44.45.109:7777';
-
 const Home = () => {
     const [statistics, setStatistics] = useState({ total: null, processed: null });
 
